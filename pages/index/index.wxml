@@ -1,0 +1,14 @@
+<view class="section">
+  <view class="section__title">多列选择器</view>
+  <picker
+    mode="multiSelector"
+    bindchange="bindMultiPickerChange"
+    bindcolumnchange="bindMultiPickerColumnChange"
+    value="{{multiIndex}}"
+    range="{{multiArray}}" range-key="text"
+  >
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]].text}}({{multiArray[0][multiIndex[0]].value}}){{multiArray[1].length > 0 ?("，" + multiArray[1][multiIndex[1]].text + "(" + multiArray[1][multiIndex[1]].value + ")"):""}}{{multiArray[2].length > 0 ?("，" + multiArray[2][multiIndex[2]].text + "(" + multiArray[2][multiIndex[2]].value + ")"):""}}
+    </view>
+  </picker>
+</view>
